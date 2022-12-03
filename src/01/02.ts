@@ -7,6 +7,7 @@ try {
     const elfList = calories.split('\n\n');
 
     let calorieList = [0, 0, 0];
+    let smallest = 0;
 
     for (let index = 0; index < elfList.length; index++) {
         const elf = elfList[index];
@@ -14,10 +15,12 @@ try {
         const elfItems = elf.split('\n');
         const cals = elfItems.reduce((prev, item) => prev + Number(item), 0);
 
-        const smallestInList = Math.min(...calorieList);
-        if (cals > smallestInList) {
-            const smallestIndex = calorieList.indexOf(smallestInList);
+        if (cals > smallest) {
+            const smallestIndex = calorieList.indexOf(smallest);
             calorieList.splice(smallestIndex, 1, cals);
+
+            //recalulate smallest
+            smallest = Math.min(...calorieList);
         }
     }
 
