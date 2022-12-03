@@ -5,8 +5,10 @@
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "01": "npx ts-node ./src/01/01.ts",
-        "02": "npx ts-node ./src/02/02.ts"
+        "problem1-1": "npx ts-node ./src/01/01.ts",
+        "problem1-2": "npx ts-node ./src/01/02.ts",
+        "problem2-1": "npx ts-node ./src/02/01.ts",
+        "problem2-2": "npx ts-node ./src/02/02.ts"
     },
     "keywords": [],
     "author": "",
